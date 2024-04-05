@@ -73,7 +73,7 @@ function install_node() {
     tar -xvzf avail-light-linux-amd64.tar.gz
     cp avail-light-linux-amd64 avail-light
 
-    read -sp "输入12位钱包助记词：" PHRASE
+    read -p "输入12位钱包助记词：" PHRASE
     cat > identity.toml <<EOF
 avail_secret_seed_phrase = "$PHRASE"
 EOF
@@ -117,7 +117,7 @@ function main_menu() {
         clear
         echo "输入对应数组进行安装部署:"
         echo "1. 安装节点"
-        echo "2. Avail服务状态"
+        echo "2. 查看Avail服务状态"
         echo "3. 获取public key"
         echo "退出脚本，使用ctrl+c"
         read -p "请输入选项（1-3）: " OPTION
